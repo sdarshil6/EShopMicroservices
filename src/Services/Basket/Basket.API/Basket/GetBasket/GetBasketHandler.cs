@@ -6,7 +6,7 @@
     {
         public async Task<GetBasketResult> Handle(GetBasketQuery query, CancellationToken cancellationToken)
         {
-            var basket = await basketRepository.GetBasket(query.UserName);
+            var basket = await basketRepository.GetBasket(query.UserName, cancellationToken);
             return new GetBasketResult(basket);
         }
     }
