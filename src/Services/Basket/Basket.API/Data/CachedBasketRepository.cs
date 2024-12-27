@@ -16,7 +16,7 @@ namespace Basket.API.Data
         public async Task<ShoppingCart> GetBasket(string userName, CancellationToken cancellationToken = default)
         {
             var cachedBasket = await distributedCache.GetStringAsync(userName, cancellationToken);
-            if(!string.IsNullOrWhiteSpace(userName))
+            if(!string.IsNullOrWhiteSpace(cachedBasket))
                 return JsonSerializer.Deserialize<ShoppingCart>(cachedBasket)!;
             var basket = await basketRepository.GetBasket(userName, cancellationToken);
             await distributedCache.SetStringAsync(userName, JsonSerializer.Serialize(basket), cancellationToken);
