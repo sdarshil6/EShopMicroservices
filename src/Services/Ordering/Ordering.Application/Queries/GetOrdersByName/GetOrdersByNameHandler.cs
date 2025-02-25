@@ -1,6 +1,7 @@
 ﻿using BuildingBlocks.CQRS;
 using Microsoft.EntityFrameworkCore;
 using Ordering.Application.Data;
+using Ordering.Application.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,4 +1,5 @@
 ﻿using BuildingBlocks.CQRS;
+using BuildingBlocks.Pagination;
 using Microsoft.EntityFrameworkCore;
 using Ordering.Application.Data;
 using Ordering.Application.Dtos;
