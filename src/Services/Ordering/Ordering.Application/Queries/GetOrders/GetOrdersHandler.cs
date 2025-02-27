@@ -1,7 +1,9 @@
 ﻿using BuildingBlocks.CQRS;
+using BuildingBlocks.Pagination;
 using Microsoft.EntityFrameworkCore;
 using Ordering.Application.Data;
 using Ordering.Application.Dtos;
+using Ordering.Application.Extensions;
 
 namespace Ordering.Application.Queries.GetOrders
 {
