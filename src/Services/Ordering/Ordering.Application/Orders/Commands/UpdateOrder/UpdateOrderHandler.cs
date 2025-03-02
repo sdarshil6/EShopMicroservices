@@ -2,10 +2,11 @@
 using Ordering.Application.Data;
 using Ordering.Application.Dtos;
 using Ordering.Application.Exceptions;
+using Ordering.Application.Orders.UpdateOrder;
 using Ordering.Domain.Models;
 using Ordering.Domain.ValueObjects;
 
-namespace Ordering.Application.Orders.UpdateOrder
+namespace Ordering.Application.Orders.Commands.UpdateOrder
 {
     public class UpdateOrderHandler(IApplicationDbContext dbContext)
     : ICommandHandler<UpdateOrderCommand, UpdateOrderResult>

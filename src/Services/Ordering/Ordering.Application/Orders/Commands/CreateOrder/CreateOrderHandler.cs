@@ -1,10 +1,11 @@
 ﻿using BuildingBlocks.CQRS;
 using Ordering.Application.Data;
 using Ordering.Application.Dtos;
+using Ordering.Application.Orders.CreateOrder;
 using Ordering.Domain.Models;
 using Ordering.Domain.ValueObjects;
 
-namespace Ordering.Application.Orders.CreateOrder
+namespace Ordering.Application.Orders.Commands.CreateOrder
 {
     public class CreateOrderHandler(IApplicationDbContext dbContext)
     : ICommandHandler<CreateOrderCommand, CreateOrderResult>
@@ -20,7 +21,7 @@ namespace Ordering.Application.Orders.CreateOrder
             dbContext.Orders.Add(order);
             await dbContext.SaveChangesAsync(cancellationToken);
 
-            return new CreateOrderResult(order.Id.Value);            
+            return new CreateOrderResult(order.Id.Value);
         }
 
         private Order CreateNewOrder(OrderDto orderDto)

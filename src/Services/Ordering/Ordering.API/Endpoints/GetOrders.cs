@@ -3,7 +3,7 @@ using Carter;
 using Mapster;
 using MediatR;
 using Ordering.Application.Dtos;
-using Ordering.Application.Queries.GetOrders;
+using Ordering.Application.Orders.Queries.GetOrders;
 
 namespace Ordering.API.Endpoints
 {

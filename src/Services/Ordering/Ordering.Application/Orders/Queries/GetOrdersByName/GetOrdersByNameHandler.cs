@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ordering.Application.Queries.GetOrdersByName
+namespace Ordering.Application.Orders.Queries.GetOrdersByName
 {
     public class GetOrdersByNameHandler(IApplicationDbContext dbContext)
     : IQueryHandler<GetOrdersByNameQuery, GetOrdersByNameResult>

@@ -2,7 +2,7 @@
 using Mapster;
 using MediatR;
 using Ordering.Application.Dtos;
-using Ordering.Application.Queries.GetOrdersByName;
+using Ordering.Application.Orders.Queries.GetOrdersByName;
 
 namespace Ordering.API.Endpoints
 {

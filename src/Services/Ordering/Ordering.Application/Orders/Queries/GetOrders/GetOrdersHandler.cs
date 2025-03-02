@@ -5,7 +5,7 @@ using Ordering.Application.Data;
 using Ordering.Application.Dtos;
 using Ordering.Application.Extensions;
 
-namespace Ordering.Application.Queries.GetOrders
+namespace Ordering.Application.Orders.Queries.GetOrders
 {
     public class GetOrdersHandler(IApplicationDbContext dbContext) : IQueryHandler<GetOrdersQuery, GetOrdersResult>
     {
