@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using BuildingBlocks.Messaging.MassTransit;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
+using Microsoft.FeatureManagement;
 
 namespace Ordering.Application
 {
@@ -17,6 +18,7 @@ namespace Ordering.Application
                 config.AddOpenBehavior(typeof(LoggingBehaviour<,>));
             });
 
+            services.AddFeatureManagement();
             services.AddMessageBroker(configuration, Assembly.GetExecutingAssembly());
 
             return services;

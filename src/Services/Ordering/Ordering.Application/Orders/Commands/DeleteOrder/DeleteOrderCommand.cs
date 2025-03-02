@@ -1,7 +1,6 @@
-﻿using BuildingBlocks.CQRS;
-using FluentValidation;
+﻿using FluentValidation;
 
-namespace Ordering.Application.Orders.DeleteOrder
+namespace Ordering.Application.Orders.Commands.DeleteOrder
 {
     public record DeleteOrderCommand(Guid OrderId)
     : ICommand<DeleteOrderResult>;
